@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FiX } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
 import { useEffect, useState, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import HighlightedDescription from "./HighlightedDescription";
@@ -55,6 +55,18 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
       const timeout = setTimeout(() => setShow(false), 200); // duración de la animación
       return () => clearTimeout(timeout);
     }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   if (!show || !product) return null;
@@ -123,9 +135,15 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
         {/* Botón cerrar */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white text-xl z-10 cursor-pointer"
+          className="absolute top-4 right-4 flex items-center justify-center
+          w-11 h-11 rounded-full
+          bg-gray-900/60 backdrop-blur-lg
+          border border-white/10
+          text-white hover:bg-gray-800/80
+          transition-all duration-200
+          z-20 cursor-pointer"
         >
-          <FiX />
+          <FiX size={20}/>
         </button>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -162,7 +180,7 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
                   onClick={prevImage}
                   className="hidden lg:block absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white px-3 py-1.5 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm"
                 >
-                  ◀
+                  <FiChevronLeft size={24} />
                 </button>
 
                 {/* Flecha derecha */}
@@ -170,7 +188,7 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
                   onClick={nextImage}
                   className="hidden lg:block absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white px-3 py-1.5 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm"
                 >
-                  ▶
+                  <FiChevronRight size={24} />
                 </button>
 
                 {/* Indicadores */}
@@ -196,7 +214,7 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
           {/* Info */}
           <div className="flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-white pr-8">
                 {product.title}
               </h2>
 

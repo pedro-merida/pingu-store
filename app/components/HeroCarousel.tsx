@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 interface Slide {
   title: string;
@@ -182,7 +183,7 @@ const HeroCarousel = () => {
         onClick={prev}
         className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white px-4 py-2 rounded-lg backdrop-blur-sm transition"
       >
-        ◀
+        <FiChevronLeft size={24} />
       </button>
 
       {/* Botón derecha */}
@@ -190,7 +191,7 @@ const HeroCarousel = () => {
         onClick={next}
         className="hidden lg:block absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white px-4 py-2 rounded-lg backdrop-blur-sm transition"
       >
-        ▶
+        <FiChevronRight size={24} />
       </button>
 
       {/* Indicadores */}

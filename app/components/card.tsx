@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useRef } from "react";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 
 interface CardProps {
@@ -100,7 +101,7 @@ const Card = ({ images = [], title, price, state, onClick }: CardProps) => {
             onClick={prevImage}
             className="hidden lg:block absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer backdrop-blur-sm"
           >
-            ◀
+            <FiChevronLeft size={24} />
           </button>
         )}
 
@@ -110,7 +111,7 @@ const Card = ({ images = [], title, price, state, onClick }: CardProps) => {
             onClick={nextImage}
             className="hidden lg:block absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 cursor-pointer backdrop-blur-sm"
           >
-            ▶
+            <FiChevronRight size={24} />
           </button>
         )}
 

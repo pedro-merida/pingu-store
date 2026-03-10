@@ -7,6 +7,7 @@ import { packs } from "../data/packs";
 import { FiSearch } from "react-icons/fi";
 import AvailabilityNotice from "../components/AvailabilityNotice";
 import { espacios } from "../data/espacios";
+import CustomSelect from "./CustomSelect";
 
 type SortOption = "az" | "za" | "newest" | "oldest" | "price-asc" | "price-desc";
 type FilterOption = "all" | "disponible" | "vendida";
@@ -104,23 +105,19 @@ const PacksPage = ({ typeFilter }: PacksPageProps) => {
             <span className="text-xs font-semibold text-gray-300/50 uppercase tracking-wide">
               Ordenar por...
             </span>
-            <div className="relative w-full md:w-64">
-              <select
-                value={sort}
-                onChange={(e) => setSort(e.target.value as SortOption)}
-                className="w-full appearance-none px-4 py-2 pr-10 rounded-lg bg-[#0b0b0b] border border-gray-700 text-white focus:outline-none focus:border-gray-500 cursor-pointer"
-              >
-                <option value="newest">Más recientes</option>
-                <option value="oldest">Más antiguos</option>
-                <option value="az">Nombre: A → Z</option>
-                <option value="za">Nombre: Z → A</option>
-                <option value="price-asc">Precio: Menor a Mayor</option>
-                <option value="price-desc">Precio: Mayor a Menor</option>
-              </select>
-              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs">
-                ▼
-              </span>
-            </div>
+            <CustomSelect
+              value={sort}
+              onChange={(v) => setSort(v as SortOption)}
+              options={[
+                { value: "newest", label: "Más recientes" },
+                { value: "oldest", label: "Más antiguos" },
+                { value: "az", label: "Nombre: A → Z" },
+                { value: "za", label: "Nombre: Z → A" },
+                { value: "price-asc", label: "Precio: Menor a Mayor" },
+                { value: "price-desc", label: "Precio: Mayor a Menor" },
+              ]}
+              width="md:w-64"
+            />
           </div>
 
           {/* Filtro: Mostrar */}
@@ -128,20 +125,16 @@ const PacksPage = ({ typeFilter }: PacksPageProps) => {
             <span className="text-xs font-semibold text-gray-300/50 uppercase tracking-wide">
               Mostrar
             </span>
-            <div className="relative w-full md:w-48">
-              <select
-                value={filter}
-                onChange={(e) => setFilter(e.target.value as FilterOption)}
-                className="w-full appearance-none px-4 py-2 pr-10 rounded-lg bg-[#0b0b0b] border border-gray-700 text-white focus:outline-none focus:border-gray-500 cursor-pointer"
-              >
-                <option value="all">Todo</option>
-                <option value="disponible">Disponibles</option>
-                <option value="vendida">Vendidas</option>
-              </select>
-              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs">
-                ▼
-              </span>
-            </div>
+            <CustomSelect
+              value={filter}
+              onChange={(v) => setFilter(v as FilterOption)}
+              options={[
+                { value: "all", label: "Todo" },
+                { value: "disponible", label: "Disponibles" },
+                { value: "vendida", label: "Vendidas" },
+              ]}
+              width="md:w-48"
+            />
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-xs font-semibold text-gray-300/50 uppercase tracking-wide">
@@ -162,7 +155,7 @@ const PacksPage = ({ typeFilter }: PacksPageProps) => {
         </div>
 
         {/* Buscador (se mantiene a la derecha) */}
-        <div className="flex flex-col gap-2 w-full md:w-80">
+        <div className="flex flex-col gap-2 w-full md:w-72">
           <div className="relative">
             <FiSearch
               size={18}

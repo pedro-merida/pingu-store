@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Card from "./card"; // ajusta la ruta si es necesario
 import { CatalogProduct } from "../types/product";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 interface LatestSkinsCarouselProps {
   products: CatalogProduct[];
@@ -96,7 +97,7 @@ const LatestSkinsCarousel = ({
               onClick={prev}
               className="absolute -left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white px-4 py-2 rounded-lg backdrop-blur-md transition z-10"
             >
-              ◀
+              <FiChevronLeft size={24} />
             </button>
           )}
 
@@ -106,7 +107,7 @@ const LatestSkinsCarousel = ({
               onClick={next}
               className="absolute -right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white px-4 py-2 rounded-lg backdrop-blur-md transition z-10"
             >
-              ▶
+              <FiChevronRight size={24} />
             </button>
           )}
         </div>
