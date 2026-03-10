@@ -23,9 +23,6 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
   const [current, setCurrent] = useState(0);
   const [show, setShow] = useState(isOpen);
 
-  const [isOverflowing, setIsOverflowing] = useState(false);
-  const modalRef = useRef<HTMLDivElement>(null);
-
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
   const SWIPE_THRESHOLD = 50;
@@ -71,22 +68,6 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-
-  useEffect(() => {
-    const checkOverflow = () => {
-      if (!modalRef.current) return;
-
-      const modalHeight = modalRef.current.offsetHeight;
-      const viewportHeight = window.innerHeight;
-
-      setIsOverflowing(modalHeight > viewportHeight - 32); // margen
-    };
-
-    checkOverflow();
-    window.addEventListener("resize", checkOverflow);
-
-    return () => window.removeEventListener("resize", checkOverflow);
-  }, [product, isOpen]);
 
   if (!show || !product) return null;
 
@@ -141,14 +122,13 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex justify-center backdrop-blur-sm p-4 overflow-y-auto transition-opacity duration-200
-      ${isOverflowing ? "items-start" : "items-center"} bg-black/70`}
+      className={`fixed inset-0 z-50 flex justify-center items-center backdrop-blur-sm p-4 overflow-y-auto transition-opacity duration-200
+      bg-black/70`}
       onClick={onClose}
     >
       {/* Modal */}
       <div
-        ref={modalRef}
-        className={`bg-[#0b0b0b] border border-gray-700 rounded-xl w-full max-w-4xl p-6 relative transition-transform duration-200
+        className={`bg-[#0b0b0b] border border-gray-700 rounded-xl w-full max-w-4xl p-6 relative max-h-[95vh] overflow-y-auto transition-transform duration-200
           ${isOpen ? 'scale-100' : 'scale-95'}`}
         onClick={(e) => e.stopPropagation()}
       >
