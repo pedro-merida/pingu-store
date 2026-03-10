@@ -12,7 +12,7 @@ const RequestSkinSection = () => {
   };
 
   return (
-    <section className="w-full px-6 md:px-20">
+    <section className="w-full md:px-20">
       <div className="mx-auto">
         
         {/* Título */}

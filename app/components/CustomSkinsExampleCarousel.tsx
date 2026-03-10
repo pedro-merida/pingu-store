@@ -50,7 +50,7 @@ const CustomSkinsExampleCarousel = ({
   };
 
   return (
-    <section className="w-full px-6 md:px-20 pt-14 bg-[#0B0F1A]">
+    <section className="w-full md:px-20 pt-14 bg-[#0B0F1A]">
       <div className="mx-auto">
         {/* Título */}
         <div className="mb-4">
