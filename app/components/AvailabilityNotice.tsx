@@ -78,7 +78,7 @@ const AvailabilityNotice = ({ status, type }: Props) => {
           e.stopPropagation(); // 🔥 evita cierre inmediato
           setOpen((prev) => !prev);
         }}
-        className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm border backdrop-blur-sm cursor-pointer ${current.badgeBg}`}
+        className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm border backdrop-blur-sm ${current.badgeBg}`}
       >
         {current.icon}
         <span className="font-medium">{label}:</span>
