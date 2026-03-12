@@ -622,7 +622,7 @@ export const weapons: BaseProduct[] = [
       "/skins/weapons/m4a1/m4_iron_wolf3.png",
       "/skins/weapons/m4a1/m4_iron_wolf4.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2025-02-13",
   },
   {
