@@ -266,4 +266,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2025-03-21",
   },
+  {
+    id: 23,
+    type: "ct",
+    title: "Zeus (God of War 2)",
+    price: "3.500 CLP",
+    description: "Zeus, el antagonista del popular juego God of War 2, se une a los Counter-Terrorist con una Skin de Player inspirada en su apariencia del mismo juego.",
+    images: [
+      "/skins/players/tt/zeus_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-13",
+  },
 ];
