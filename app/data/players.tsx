@@ -278,4 +278,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-03-13",
   },
+  {
+    id: 24,
+    type: "ct",
+    title: "Yugi Muto (Yu-Gi-Oh!)",
+    price: "3.500 CLP",
+    description: "Yugi Muto, el protagonista del Anime Yu-Gi-Oh!, se une a los Counter-Terrorist con una Skin de Player inspirada en su apariencia como el faraón.",
+    images: [
+      "/skins/players/ct/yugi_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-13",
+  },
 ];
