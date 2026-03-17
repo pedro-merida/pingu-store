@@ -290,4 +290,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-03-13",
   },
+  {
+    id: 25,
+    type: "ct",
+    title: "Pepsi Man",
+    price: "3.500 CLP",
+    description: "Pepsi Man!! Llega corriendo a toda velocidad a ofrecerle Pepsi a los jugadores uniendose a los Counter-Terrorist",
+    images: [
+      "/skins/players/ct/pepsiman_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-17",
+  },
 ];
