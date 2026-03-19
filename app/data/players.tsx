@@ -295,7 +295,7 @@ export const players: BaseProduct[] = [
     type: "ct",
     title: "Pepsi Man",
     price: "3.500 CLP",
-    description: "Pepsi Man!! Llega corriendo a toda velocidad a ofrecerle Pepsi a los jugadores uniendose a los Counter-Terrorist",
+    description: "Pepsi Man!! Llega corriendo a toda velocidad a ofrecerle Pepsi a los jugadores uniendose a los Counter-Terrorist.",
     images: [
       "/skins/players/ct/pepsiman_ct.png",
     ],
@@ -307,11 +307,23 @@ export const players: BaseProduct[] = [
     type: "tt",
     title: "Pyramid Head (Silent Hill 2)",
     price: "3.500 CLP",
-    description: "Pyramid Head, el tenebroso villano del videojuego Silent Hill 2, se une a los Terrorist para cumplir su papel como verdugo",
+    description: "Pyramid Head, el tenebroso villano del videojuego Silent Hill 2, se une a los Terrorist para cumplir su papel como verdugo.",
     images: [
       "/skins/players/tt/pyramid_head_tt.png",
     ],
     state: "disponible",
     createdAt: "2026-03-18",
+  },
+  {
+    id: 27,
+    type: "tt",
+    title: "Ben Kenobi (Star Wars IV: Una nueva esperanza)",
+    price: "4.000 CLP",
+    description: "Ben Kenobi, el mentor del heroe Luke Skywalker, se una a los Terrorist para enseñarles los caminos de la fuerza.",
+    images: [
+      "/skins/players/tt/ben_kenobi_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-19",
   },
 ];
