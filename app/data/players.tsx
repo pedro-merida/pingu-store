@@ -302,4 +302,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-03-17",
   },
+  {
+    id: 26,
+    type: "tt",
+    title: "Pyramid Head (Silent Hill 2)",
+    price: "3.500 CLP",
+    description: "Pyramid Head, el tenebroso villano del videojuego Silent Hill 2, se une a los Terrorist para cumplir su papel como verdugo",
+    images: [
+      "/skins/players/tt/pyramid_head_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-18",
+  },
 ];
