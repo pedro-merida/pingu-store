@@ -326,4 +326,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-03-19",
   },
+  {
+    id: 28,
+    type: "ct",
+    title: "Carabinero de Chile",
+    price: "3.500 CLP",
+    description: "Los Carabineros de Chile llegan al servidor como refuerzo para los Counter-Terrorist para combatir a los terroristas.",
+    images: [
+      "/skins/players/ct/carabinero_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-23",
+  },
 ];
