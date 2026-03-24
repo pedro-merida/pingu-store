@@ -338,4 +338,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-03-23",
   },
+  {
+    id: 29,
+    type: "tt",
+    title: "Omni-Man (Invincible)",
+    price: "3.500 CLP",
+    description: "Omni-Man, el poderoso heroe de la serie Invincible, se une a los Terrorist para conquistar a los jugadores del otro equipo.",
+    images: [
+      "/skins/players/tt/omni_man_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-23",
+  },
 ];
