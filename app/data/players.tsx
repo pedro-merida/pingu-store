@@ -331,7 +331,7 @@ export const players: BaseProduct[] = [
     type: "ct",
     title: "Carabinero de Chile",
     price: "3.500 CLP",
-    description: "Los Carabineros de Chile llegan al servidor como refuerzo para los Counter-Terrorist para combatir a los terroristas.",
+    description: "Los Carabineros de Chile llegan al servidor como refuerzo para los Counter-Terrorist.",
     images: [
       "/skins/players/ct/carabinero_ct.png",
     ],
