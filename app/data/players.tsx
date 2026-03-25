@@ -350,4 +350,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-03-23",
   },
+  {
+    id: 30,
+    type: "tt",
+    title: "Ramona Flowers (Scott Pilgrim vs. the World)",
+    price: "4.000 CLP",
+    description: "Ramona Flowers, la co-protagonista de la serie de comics Scott Pilgrim vs. the World, se une a los Terrorist para luchar contra sus 7 malvados ex.",
+    images: [
+      "/skins/players/tt/ramona_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-25",
+  },
 ];
