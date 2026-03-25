@@ -82,7 +82,7 @@ export const custom: BaseProduct[] = [
     type: "custom",
     title: "Leela (Futurama)",
     price: "3.500 CLP",
-    description: "La jugadora solicito una skin de Leela de la serie Futurama.",
+    description: "La jugadora solicitó una skin de Leela de la serie Futurama.",
     images: [
       "/skins/custom/leela_ct.png",
     ],
