@@ -13,7 +13,6 @@ export default function Players() {
   const latestSkins = [
       ...custom.map((p) => ({ ...p, category: "custom" as const })),
     ]
-      .slice(0, 6);
 
   const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(null);
   

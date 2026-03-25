@@ -367,7 +367,7 @@ export const players: BaseProduct[] = [
     type: "ct",
     title: "Leela (Futurama)",
     price: "3.500 CLP",
-    description: "Leela, la capitana de Planet Express de la seria Futurama, se une a los Counter-Terrorist para combatir alienigenas y entregar mails.",
+    description: "Leela, la capitana de Planet Express de la serie Futurama, se une a los Counter-Terrorist para combatir alienigenas y entregar mails.",
     images: [
       "/skins/players/ct/leela_ct.png",
     ],
