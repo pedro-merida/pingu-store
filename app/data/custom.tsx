@@ -77,4 +77,16 @@ export const custom: BaseProduct[] = [
     state: "vendida",
     createdAt: "2025-09-08",
   },
+  {
+    id: 7,
+    type: "custom",
+    title: "Leela (Futurama)",
+    price: "3.500 CLP",
+    description: "La jugadora solicito una skin de Leela de la serie Futurama.",
+    images: [
+      "/skins/custom/leela_ct.png",
+    ],
+    state: "vendida",
+    createdAt: "2026-03-25",
+  },
 ];
