@@ -374,4 +374,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-03-25",
   },
+  {
+    id: 32,
+    type: "ct",
+    title: "Ghost Rider",
+    price: "3.500 CLP",
+    description: "Ghost Rider, el vengador fantasma, se une a los Counter-Terrorist para vengar las almas de los inocentes.",
+    images: [
+      "/skins/players/ct/ghost_rider_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-03-27",
+  },
 ];
