@@ -386,4 +386,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-03-27",
   },
+  {
+    id: 33,
+    type: "tt",
+    title: "Jesus",
+    price: "4.000 CLP",
+    description: "Jesus, el hijo de Dios, se une a los Terrorist esta semana santa para asegurarse de que respeten la semana santa... Por la fuerza.",
+    images: [
+      "/skins/players/tt/jesus_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-03",
+  },
 ];
