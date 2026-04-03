@@ -389,9 +389,9 @@ export const players: BaseProduct[] = [
   {
     id: 33,
     type: "tt",
-    title: "Jesus",
+    title: "Jesús",
     price: "4.000 CLP",
-    description: "Jesus, el hijo de Dios, se une a los Terrorist esta semana santa para asegurarse de que respeten la semana santa... Por la fuerza.",
+    description: "Jesús de Nazaret, el hijo de Dios, se une a los Terrorist esta semana santa para asegurarse de que respeten la semana santa... Por la fuerza.",
     images: [
       "/skins/players/tt/jesus_tt.png",
     ],
