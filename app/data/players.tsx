@@ -398,4 +398,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-04-03",
   },
+  {
+    id: 34,
+    type: "ct",
+    title: "Bad Bunny",
+    price: "3.500 CLP",
+    description: "Bad Bunny, el famoso cantante de reggaeton, se une a los Counter-Terrorist esta semana santa para entregar los huevitos de pascua... o así no era?.",
+    images: [
+      "/skins/players/ct/bad_bunny_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-04",
+  },
 ];
