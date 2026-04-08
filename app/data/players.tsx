@@ -335,7 +335,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/ct/carabinero_ct.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-03-23",
   },
   {
