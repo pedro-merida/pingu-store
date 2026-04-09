@@ -410,4 +410,17 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-04-04",
   },
+  {
+    id: 35,
+    type: "tt",
+    title: "Hincha Colo-Colo",
+    price: "3.500 CLP",
+    description: "Los fanáticos del equipo Colo-Colo se hacen presentes en el servidor uniendose a los Terrorist para darles apoyo con la garra blanca.",
+    images: [
+      "/skins/players/tt/hincha_colo_tt1.png",
+      "/skins/players/tt/hincha_colo_tt2.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-04-09",
+  },
 ];
