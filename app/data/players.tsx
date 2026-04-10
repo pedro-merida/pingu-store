@@ -420,7 +420,7 @@ export const players: BaseProduct[] = [
       "/skins/players/tt/hincha_colo_tt1.png",
       "/skins/players/tt/hincha_colo_tt2.png"
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-04-09",
   },
 ];
