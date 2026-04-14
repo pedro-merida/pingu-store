@@ -423,4 +423,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-04-09",
   },
+  {
+    id: 35,
+    type: "tt",
+    title: "Michael Jackson (Thriller)",
+    price: "4.000 CLP",
+    description: "Michael Jackson, el rey del pop, se une a los Terrorist son su icónico traje de Thriller para levantar a los muertos y bailar.",
+    images: [
+      "/skins/players/tt/michael_thriller_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-14",
+  },
 ];
