@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import Image from 'next/image'
 import HeroCarousel from './components/HeroCarousel'
 import AboutSection from './components/AboutSection'
@@ -132,6 +133,15 @@ export default function Home() {
         buttonVariant='cta'
       />
 
+      <Script id="chtl-config" strategy="afterInteractive">
+        {`window.chtlConfig = { chatbotId: "1696159535" }`}
+      </Script>
+      <Script
+        id="chtl-script"
+        src="https://chatling.ai/js/embed.js"
+        strategy="afterInteractive"
+        data-id="1696159535"
+      />
     </main>
   )
 }
