@@ -435,4 +435,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-04-14",
   },
+  {
+    id: 36,
+    type: "tt",
+    title: "Justin Bieber",
+    price: "4.000 CLP",
+    description: "Justin Bieber, el famoso cantante de pop, se une a los Terrorist para contagiarlos con la Bieber Fever.",
+    images: [
+      "/skins/players/tt/justin_bieber_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-15",
+  },
 ];
