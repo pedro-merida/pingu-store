@@ -450,7 +450,7 @@ export const players: BaseProduct[] = [
   {
     id: 37,
     type: "tt",
-    title: "Liu Kang (Mortal Kombat: Shaolin Monks",
+    title: "Liu Kang (Mortal Kombat: Shaolin Monks)",
     price: "4.000 CLP",
     description: "Liu Kang, el campeón de Earthrealm, se une a los Terrorist con su apariencia de Mortal Kombat: Shaolin Monks para hacerles un Fatality a sus enemigos.",
     images: [
