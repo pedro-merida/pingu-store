@@ -62,15 +62,17 @@ const PacksPage = ({ typeFilter }: PacksPageProps) => {
       case "za":
         return [...filtered].sort((a, b) => b.title.localeCompare(a.title));
       case "newest":
-        return [...filtered].sort(
-          (a, b) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-        );
+        return [...filtered].sort((a, b) => {
+          const dateDiff =
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+          return dateDiff !== 0 ? dateDiff : b.id - a.id;
+        });
       case "oldest":
-        return [...filtered].sort(
-          (a, b) =>
-            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
-        );
+        return [...filtered].sort((a, b) => {
+          const dateDiff =
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+          return dateDiff !== 0 ? dateDiff : a.id - b.id;
+        });
       case "price-asc":
         return [...filtered].sort(
           (a, b) => parsePrice(a.price) - parsePrice(b.price)

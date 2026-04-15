@@ -18,10 +18,11 @@ const LatestSkinsCarousel = ({
   const [itemsPerView, setItemsPerView] = useState(3);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const sortedProducts = [...products].sort(
-    (a, b) =>
-      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-  );
+  const sortedProducts = [...products].sort((a, b) => {
+    const dateDiff =
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    return dateDiff !== 0 ? dateDiff : b.id - a.id;
+  });
 
   // Detectar tamaño de pantalla (responsive real)
   useEffect(() => {
