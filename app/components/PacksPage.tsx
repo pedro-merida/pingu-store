@@ -189,7 +189,7 @@ const PacksPage = ({ typeFilter }: PacksPageProps) => {
           ))
         ) : (
           <div className="col-span-full text-center text-gray-400 py-16 text-lg">
-            No se encontraron armas con ese nombre.
+            No se encontraron packs con ese nombre.
           </div>
         )}
       </div>

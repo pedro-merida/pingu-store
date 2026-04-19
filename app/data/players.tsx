@@ -458,5 +458,17 @@ export const players: BaseProduct[] = [
     ],
     state: "disponible",
     createdAt: "2026-04-15",
+  },
+  {
+    id: 38,
+    type: "tt",
+    title: "Marcianito 100% real no fake",
+    price: "4.000 CLP",
+    description: "El marcianito 100% real no fake, se une a los Terrorist para bailar unos cumbiones y alegrar a su equipo.",
+    images: [
+      "/skins/players/tt/alien_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-18",
   }
 ];
