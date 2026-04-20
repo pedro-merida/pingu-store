@@ -470,5 +470,17 @@ export const players: BaseProduct[] = [
     ],
     state: "disponible",
     createdAt: "2026-04-18",
+  },
+  {
+    id: 39,
+    type: "ct",
+    title: "Homelander (The Boys)",
+    price: "4.000 CLP",
+    description: "Homelander, el líder de los Seven, se une a los Counter-Terrorist para proteger el mundo de una manera... polémica.",
+    images: [
+      "/skins/players/ct/homelander_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-20",
   }
 ];
