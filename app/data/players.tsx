@@ -482,5 +482,17 @@ export const players: BaseProduct[] = [
     ],
     state: "disponible",
     createdAt: "2026-04-20",
-  }
+  },
+  {
+    id: 40,
+    type: "tt",
+    title: "El Chavo del 8",
+    price: "3.500 CLP",
+    description: "El chavo del 8, el humilde protagonista de la serie del mismo nombre, se une a los Terrorist a cambio de unas tortas de jamón.",
+    images: [
+      "/skins/players/tt/chavo_ocho_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-27",
+  },
 ];
