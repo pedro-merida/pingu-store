@@ -3,5 +3,5 @@ export type Type = "weapon" | "player";
 
 export const espacios: Record<Type, Status> = {
   weapon: "vendido",
-  player: "ultimos",
+  player: "disponible",
 };
