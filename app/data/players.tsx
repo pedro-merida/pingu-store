@@ -424,7 +424,7 @@ export const players: BaseProduct[] = [
     createdAt: "2026-04-09",
   },
   {
-    id: 35,
+    id: 36,
     type: "tt",
     title: "Michael Jackson (Thriller)",
     price: "4.000 CLP",
@@ -436,7 +436,7 @@ export const players: BaseProduct[] = [
     createdAt: "2026-04-14",
   },
   {
-    id: 36,
+    id: 37,
     type: "tt",
     title: "Justin Bieber",
     price: "4.000 CLP",
@@ -448,7 +448,7 @@ export const players: BaseProduct[] = [
     createdAt: "2026-04-15",
   },
   {
-    id: 37,
+    id: 38,
     type: "tt",
     title: "Liu Kang (Mortal Kombat: Shaolin Monks)",
     price: "4.000 CLP",
@@ -460,7 +460,7 @@ export const players: BaseProduct[] = [
     createdAt: "2026-04-15",
   },
   {
-    id: 38,
+    id: 39,
     type: "tt",
     title: "Marcianito 100% real no fake",
     price: "4.000 CLP",
@@ -472,7 +472,7 @@ export const players: BaseProduct[] = [
     createdAt: "2026-04-18",
   },
   {
-    id: 39,
+    id: 40,
     type: "ct",
     title: "Homelander (The Boys)",
     price: "4.000 CLP",
@@ -484,7 +484,7 @@ export const players: BaseProduct[] = [
     createdAt: "2026-04-20",
   },
   {
-    id: 40,
+    id: 41,
     type: "tt",
     title: "El Chavo del 8",
     price: "3.500 CLP",
@@ -496,7 +496,7 @@ export const players: BaseProduct[] = [
     createdAt: "2026-04-27",
   },
   {
-    id: 41,
+    id: 42,
     type: "tt",
     title: "Ryu (Street Fighter)",
     price: "4.000 CLP",
