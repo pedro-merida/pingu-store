@@ -519,4 +519,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-04-29",
   },
+  {
+    id: 44,
+    type: "tt",
+    title: "Jose Antonio Kasr",
+    price: "3.500 CLP",
+    description: "Jose Antonio Kast, el actual presidente de Chile, se une a los Terrorist con su estilo serio y directo, decidido a imponer orden... en algún momento.",
+    images: [
+      "/skins/players/tt/kast_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-29",
+  },
 ];
