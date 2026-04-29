@@ -495,4 +495,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-04-27",
   },
+  {
+    id: 41,
+    type: "tt",
+    title: "Ryu (Street Fighter)",
+    price: "4.000 CLP",
+    description: "Ryu, el peleador japones de Street Fighter, se une a los Terrorist para lanzarles un Hadouken y un Shoryuken a sus enemigos",
+    images: [
+      "/skins/players/tt/ruy_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-29",
+  },
 ];
