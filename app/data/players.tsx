@@ -500,9 +500,21 @@ export const players: BaseProduct[] = [
     type: "tt",
     title: "Ryu (Street Fighter)",
     price: "4.000 CLP",
-    description: "Ryu, el peleador japones de Street Fighter, se une a los Terrorist para lanzarles un Hadouken y un Shoryuken a sus enemigos",
+    description: "Ryu, el peleador japones de Street Fighter, se une a los Terrorist para lanzarles un Hadouken y un Shoryuken a sus enemigos.",
     images: [
       "/skins/players/tt/ryu_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-04-29",
+  },
+  {
+    id: 43,
+    type: "ct",
+    title: "Gabriel Boric",
+    price: "3.500 CLP",
+    description: "Gabriel Boric, el ex-presidente de Chile, se une a los Counter-Terrorist para defender los valores democráticos.",
+    images: [
+      "/skins/players/ct/boric_ct.png",
     ],
     state: "disponible",
     createdAt: "2026-04-29",
