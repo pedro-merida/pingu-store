@@ -502,7 +502,7 @@ export const players: BaseProduct[] = [
     price: "4.000 CLP",
     description: "Ryu, el peleador japones de Street Fighter, se une a los Terrorist para lanzarles un Hadouken y un Shoryuken a sus enemigos",
     images: [
-      "/skins/players/tt/ruy_tt.png",
+      "/skins/players/tt/ryu_tt.png",
     ],
     state: "disponible",
     createdAt: "2026-04-29",
