@@ -528,7 +528,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/tt/kast_tt.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-04-29",
   },
 ];
