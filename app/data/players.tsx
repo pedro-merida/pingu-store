@@ -444,7 +444,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/tt/justin_bieber_tt.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-04-15",
   },
   {
