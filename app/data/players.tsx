@@ -531,4 +531,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-04-29",
   },
+  {
+    id: 45,
+    type: "ct",
+    title: "Calamardo Hermoso",
+    price: "3.500 CLP",
+    description: "Calamardo, el vecino de Bob Esponja, se une a los Counter-Terrorist con su apariencia perfecta y hermosa para distraer a sus enemigos.",
+    images: [
+      "/skins/players/ct/calamardo_hermoso_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-05-01",
+  },
 ];
