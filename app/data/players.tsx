@@ -551,6 +551,7 @@ export const players: BaseProduct[] = [
     description: "Ragatha, la muñeca de trapo de The Amazing Digital Circus, se une a los Counter-Terrorist para tratar de agradarles a todos. También se une a los Terrorist con su apariencia Evil Ragatha para insultar a sus enemigos. Consulta el WhatsApp para ofertas si quieres comprar ambas versiones.",
     images: [
       "/skins/players/ct/ragatha_ct.png",
+      "/skins/players/tt/ragatha_evil_tt.png",
     ],
     state: "disponible",
     createdAt: "2026-05-10",
@@ -563,6 +564,7 @@ export const players: BaseProduct[] = [
     description: "Evil Ragatha, la versión malvada de la muñeca de trapo de The Amazing Digital Circus, se une a los Terrorist para insultar a sus enemigos. También se une a los Counter-Terrorist para tratar de agradarles a todos. Consulta el WhatsApp para ofertas si quieres comprar ambas versiones.",
     images: [
       "/skins/players/tt/ragatha_evil_tt.png",
+      "/skins/players/ct/ragatha_ct.png",
     ],
     state: "disponible",
     createdAt: "2026-05-10",
