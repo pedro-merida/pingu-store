@@ -41,9 +41,11 @@ const PlayersPage = ({ typeFilter }: PlayersPageProps) => {
     let filtered = players;
 
     if (typeFilter) {
-      filtered = filtered.filter(
-        (product) => product.type.toLowerCase() === typeFilter.toLowerCase()
-      );
+      const tf = typeFilter.toLowerCase();
+      filtered = filtered.filter((product) => {
+        const pt = product.type.toLowerCase();
+        return pt === tf || pt === "both";
+      });
     }
 
     // Buscador
