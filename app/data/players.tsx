@@ -556,4 +556,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-05-10",
   },
+  {
+    id: 47,
+    type: "tt",
+    title: "Goku Blue Kaioken (Dragon Ball Super)",
+    price: "4.000 CLP",
+    description: "Goku, el guerrero Saiyajin de Dragon Ball, se une a los Terrorist con su apariencia Super Saiyajin Blue Kaioken para destruir a sus enemigos, su poder es tan grande que se puede ver su aura.",
+    images: [
+      "/skins/players/tt/goku_blue_kaioken_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-05-11",
+  },
 ];
