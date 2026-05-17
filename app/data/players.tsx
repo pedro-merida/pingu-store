@@ -568,4 +568,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-05-11",
   },
+  {
+    id: 48,
+    type: "ct",
+    title: "Calcetín con Rombos Man (31 Minuntos)",
+    price: "3.500 CLP",
+    description: "Calcetín con Rombos Man, el heroe de 31 Minuntos, se une a los Counter-Terrorist para enseñarles a sus enemigos lo que es justo y honesto.",
+    images: [
+      "/skins/players/ct/calcetin_rombos_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-05-16",
+  },
 ];
