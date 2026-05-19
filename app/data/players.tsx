@@ -580,4 +580,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-05-16",
   },
+  {
+    id: 49,
+    type: "tt",
+    title: "Marco Salamanca",
+    price: "4.000 CLP",
+    description: "Marco Salamanca, uno de los primos Salamanca, se une a los Terrorist para cobrar venganza sobre Walter White.",
+    images: [
+      "/skins/players/tt/marco_salamanca_tt.png",
+    ],
+    state: "vendida",
+    createdAt: "2026-04-29",
+  },
 ];
