@@ -59,7 +59,7 @@ export const players: BaseProduct[] = [
       "/skins/players/tt/mandalorian1_tt.png",
       "/skins/players/tt/mandalorian2_tt.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2025-07-03",
   },
   {
