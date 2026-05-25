@@ -599,7 +599,7 @@ export const players: BaseProduct[] = [
     price: "3.500 CLP",
     description: "El Ranger Rojo, el lider de los Power Rangers SPD, se une a los Terrorist con su traje modo SWAT.",
     images: [
-      "/skins/players/tt/spd_red_swat.png",
+      "/skins/players/tt/spd_red_swat_tt.png",
     ],
     state: "disponible",
     createdAt: "2026-05-25",
