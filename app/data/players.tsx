@@ -604,4 +604,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-05-25",
   },
+  {
+    id: 51,
+    type: "ct",
+    title: "SPD Ranger Azul (SWAT Mode)",
+    price: "3.500 CLP",
+    description: "El Ranger Azul, miembro de los Power Rangers SPD, se une a los Counter-Terrorist con su traje modo SWAT.",
+    images: [
+      "/skins/players/ct/spd_blue_swat_ct.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-05-26",
+  },
 ];
