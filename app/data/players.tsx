@@ -601,7 +601,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/tt/spd_red_swat_tt.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-05-25",
   },
 ];
