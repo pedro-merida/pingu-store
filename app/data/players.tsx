@@ -553,7 +553,7 @@ export const players: BaseProduct[] = [
       "/skins/players/ct/ragatha_ct.png",
       "/skins/players/tt/ragatha_evil_tt.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-05-10",
   },
   {
