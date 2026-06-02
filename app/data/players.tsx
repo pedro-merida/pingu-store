@@ -628,4 +628,29 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-06-02",
   },
+  {
+    id: 53,
+    type: "both",
+    title: "Pomni (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Pomni, la bufona de The Amazing Digital Circus, se une a los Counter-Terrorist para ayudarlos a escapar del circo. También se une a los Terrorist con su apariencia Evil Pomni para provocar a sus enemigos. Consulta el WhatsApp para ofertas si quieres comprar ambas versiones.",
+    images: [
+      "/skins/players/ct/pomni_ct.png",
+      "/skins/players/tt/pomni_evil_tt.png",
+    ],
+    state: "vendida",
+    createdAt: "2026-05-03",
+  },
+  {
+    id: 54,
+    type: "ct",
+    title: "Kinger (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Kinger, la pieza de ajedrez de Rey de The Amazing Digital Circus, se une a los Counter-Terrorist para mostrarles su colección de insectos.",
+    images: [
+      "/skins/players/ct/kinger_ct.png",
+    ],
+    state: "vendida",
+    createdAt: "2026-05-02",
+  },
 ];
