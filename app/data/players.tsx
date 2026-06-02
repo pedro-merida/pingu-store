@@ -653,4 +653,17 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-05-02",
   },
+  {
+    id: 55,
+    type: "tt",
+    title: "Gangle (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Gangle, la muñeca de cinta de The Amazing Digital Circus, se une a los Terrorist con su mascara de tristeza, pero una vez que tenga la bomba, utiliza su máscara de felicidad!.",
+    images: [
+      "/skins/players/tt/gangle1_tt.png",
+      "/skins/players/tt/gangle2_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-02",
+  },
 ];
