@@ -616,4 +616,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-05-26",
   },
+  {
+    id: 52,
+    type: "tt",
+    title: "Caine (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Caine, el administrador del Amazing Digital Circus, se une a los Terrorist para controlar a los personajes del circo que se han unido ultimamente.",
+    images: [
+      "/skins/players/tt/caine_tt.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-06-02",
+  },
 ];
