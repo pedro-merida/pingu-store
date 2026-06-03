@@ -663,7 +663,7 @@ export const players: BaseProduct[] = [
       "/skins/players/tt/gangle1_tt.png",
       "/skins/players/tt/gangle2_tt.png"
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-06-02",
   },
 ];
