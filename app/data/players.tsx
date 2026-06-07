@@ -516,7 +516,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/ct/boric_ct.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-04-29",
   },
   {
