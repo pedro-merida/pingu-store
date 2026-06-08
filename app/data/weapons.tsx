@@ -102,7 +102,7 @@ export const weapons: BaseProduct[] = [
       "/skins/weapons/ak47/ak_lycanthrope1.png",
       "/skins/weapons/ak47/ak_lycanthrope2.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2024-09-04",
   },
   {
