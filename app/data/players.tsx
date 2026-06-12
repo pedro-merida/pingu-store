@@ -666,4 +666,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-06-02",
   },
+  {
+    id: 56,
+    type: "tt",
+    title: "Arthur Fleck (Joker)",
+    price: "4.000 CLP",
+    description: "Arthur Fleck, de la pelicula Joker (2019), se une a los Terrorist para darles lo que p*tas merecen!.",
+    images: [
+      "/skins/players/tt/arthur_fleck_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-11",
+  },
 ];
