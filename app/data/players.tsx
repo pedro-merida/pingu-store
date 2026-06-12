@@ -678,4 +678,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-06-11",
   },
+  {
+    id: 57,
+    type: "tt",
+    title: "Dissapearing Guy (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "El tipo que desaparece, de The Amazing Digital Circus, se une a los Terrorist par-",
+    images: [
+      "/skins/players/tt/dissapearing_guy_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-12",
+  },
 ];
