@@ -571,7 +571,7 @@ export const players: BaseProduct[] = [
   {
     id: 48,
     type: "ct",
-    title: "Calcetín con Rombos Man (31 Minuntos)",
+    title: "Calcetín con Rombos Man (31 Minutos)",
     price: "3.500 CLP",
     description: "Calcetín con Rombos Man, el heroe de 31 Minuntos, se une a los Counter-Terrorist para enseñarles a sus enemigos lo que es justo y honesto.",
     images: [
@@ -683,7 +683,7 @@ export const players: BaseProduct[] = [
     type: "tt",
     title: "Dissapearing Guy (The Amazing Digital Circus)",
     price: "4.000 CLP",
-    description: "El tipo que desaparece, de The Amazing Digital Circus, se une a los Terrorist par-",
+    description: "El tipo que desaparece, de The Amazing Digital Circus, se une a los Terrorist para cant-",
     images: [
       "/skins/players/tt/dissapearing_guy_tt.png"
     ],
