@@ -790,4 +790,30 @@ export const weapons: BaseProduct[] = [
     state: "disponible",
     createdAt: "2024-09-04",
   },
+  {
+    id: 61,
+    type: "cuchillo",
+    title: "Zooble (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Zooble, una de las integrantes de The Amazing Digital Circus, se une a sus compañeros de circo! Aunque de una forma diferente...",
+    images: [
+      "/skins/weapons/cuchillo/knife_zooble1.png",
+      "/skins/weapons/cuchillo/knife_zooble2.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-14",
+  },
+  {
+    id: 62,
+    type: "cuchillo",
+    title: "Bubble (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Bubble, una de las integrantes de The Amazing Digital Circus, se une en forma de látigo para golpear a sus enemigos.",
+    images: [
+      "/skins/weapons/cuchillo/knife_bubble1.png",
+      "/skins/weapons/cuchillo/knife_bubble2.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-14",
+  },
 ];
