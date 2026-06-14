@@ -800,7 +800,7 @@ export const weapons: BaseProduct[] = [
       "/skins/weapons/cuchillo/knife_zooble1.png",
       "/skins/weapons/cuchillo/knife_zooble2.png"
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-06-14",
   },
   {
