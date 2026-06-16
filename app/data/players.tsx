@@ -690,4 +690,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-06-12",
   },
+  {
+    id: 58,
+    type: "tt",
+    title: "Levi Ackerman (Attack on Titan)",
+    price: "3.500 CLP",
+    description: "Levi Ackerman, el capitán del Escuadrón de Operaciones Especiales del Cuerpo de Exploración, se une a los Terrorist para matar a los titanes del equipo enemigo",
+    images: [
+      "/skins/players/tt/levi_ackerman_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-15",
+  },
 ];
