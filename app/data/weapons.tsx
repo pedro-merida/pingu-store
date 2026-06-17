@@ -816,4 +816,17 @@ export const weapons: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-06-14",
   },
+  {
+    id: 63,
+    type: "awp",
+    title: "TF2 Sniper Default AWP",
+    price: "4.000 CLP",
+    description: "Team Fortress 2 y Counter-Strike colaboran trayendo el arma del Sniper como AWP!.",
+    images: [
+      "/skins/weapons/awp/awp_tf2_default1.png",
+      "/skins/weapons/awp/awp_tf2_default2.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-17",
+  },
 ];
