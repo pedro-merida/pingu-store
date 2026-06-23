@@ -706,7 +706,7 @@ export const players: BaseProduct[] = [
     id: 59,
     type: "ct",
     title: "Jax Maid (The Amazing Digital Circus)",
-    price: "3.500 CLP",
+    price: "4.000 CLP",
     description: "Jax, el conejo sarcástico de The Amazing Digital Circus, se une a los Counter-Terrorist en su traje de Maid para molestar a sus compañeros.",
     images: [
       "/skins/players/ct/jax_maid_ct.png"
