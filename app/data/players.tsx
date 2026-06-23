@@ -714,4 +714,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-05-08",
   },
+  {
+    id: 60,
+    type: "tt",
+    title: "Gummigoo (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Gummigoo, el cocodrilo de gomita de The Amazing Digital Circus, se une a los Terrorist para robar la miel de maple del Reino Cañon Caramelo.",
+    images: [
+      "/skins/players/tt/gummigoo_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-23",
+  },
 ];
