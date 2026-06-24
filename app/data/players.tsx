@@ -658,7 +658,7 @@ export const players: BaseProduct[] = [
     type: "tt",
     title: "Gangle (The Amazing Digital Circus)",
     price: "4.000 CLP",
-    description: "Gangle, la muñeca de cinta de The Amazing Digital Circus, se une a los Terrorist con su mascara de tristeza, pero una vez que tenga la bomba, utiliza su máscara de felicidad!.",
+    description: "Gangle, la muñeca de cinta de The Amazing Digital Circus, se une a los Terrorist con su máscara de tristeza, pero una vez que tenga la bomba, utiliza su máscara de felicidad!.",
     images: [
       "/skins/players/tt/gangle1_tt.png",
       "/skins/players/tt/gangle2_tt.png"
@@ -737,5 +737,17 @@ export const players: BaseProduct[] = [
     ],
     state: "disponible",
     createdAt: "2026-06-23",
+  },
+  {
+    id: 62,
+    type: "tt",
+    title: "Ribbit (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Ribbit, el rana de The Amazing Digital Circus, se une a los Terrorist para unirse a sus amigos Jax y Kaufmo.",
+    images: [
+      "/skins/players/tt/ribbit_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-24",
   },
 ];
