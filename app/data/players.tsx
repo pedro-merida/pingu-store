@@ -726,4 +726,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-06-23",
   },
+  {
+    id: 61,
+    type: "tt",
+    title: "Kaufmo (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Kaufmo, el payaso de The Amazing Digital Circus, se une a los Terrorist para encontrar la salida del circo... antes de abstraerse.",
+    images: [
+      "/skins/players/tt/kaufmo_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-06-23",
+  },
 ];
