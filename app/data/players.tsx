@@ -625,7 +625,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/tt/caine_tt.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-06-02",
   },
   {
