@@ -723,7 +723,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/tt/gummigoo_tt.png"
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-06-23",
   },
 ];
