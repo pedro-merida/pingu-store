@@ -750,4 +750,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-06-24",
   },
+  {
+    id: 63,
+    type: "ct",
+    title: "Zooble (The Amazing Digital Circus)",
+    price: "4.000 CLP",
+    description: "Zooble, la muñeca armable de The Amazing Digital Circus, se une a los Counter-Terrorist para no participar en ninguna de las aventuras de Caine.",
+    images: [
+      "/skins/players/ct/zooble_ct.png"
+    ],
+    state: "vendida",
+    createdAt: "2026-06-24",
+  },
 ];

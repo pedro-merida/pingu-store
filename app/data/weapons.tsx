@@ -141,7 +141,7 @@ export const weapons: BaseProduct[] = [
       "/skins/weapons/ak47/ak_oni_vandal1.png",
       "/skins/weapons/ak47/ak_oni_vandal2.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2025-09-06",
   },
   {
