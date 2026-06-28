@@ -155,7 +155,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/ct/sebastian_pinera_ct.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2025-01-21",
   },
   {
@@ -191,7 +191,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/ct/female_cat_therian_ct.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-02-16",
   },
   {
