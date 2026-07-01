@@ -8,6 +8,7 @@ import { FiSearch } from "react-icons/fi";
 import AvailabilityNotice from "../components/AvailabilityNotice";
 import { espacios } from "../data/espacios";
 import CustomSelect from "./CustomSelect";
+import { getProductMedia } from "../types/product";
 
 type SortOption = "az" | "za" | "newest" | "oldest" | "price-asc" | "price-desc";
 type FilterOption = "all" | "disponible" | "vendida";
@@ -21,6 +22,8 @@ const WeaponsPage = ({ typeFilter }: WeaponsPageProps) => {
   const [sort, setSort] = useState<SortOption>("newest");
   const [filter, setFilter] = useState<FilterOption>("all");
   const [selectedProduct, setSelectedProduct] = useState<typeof weapons[0] | null>(null);
+  const [modalStartIndex, setModalStartIndex] = useState(0);
+  const [autoPlayVideo, setAutoPlayVideo] = useState(false);
   const [loading, setLoading] = useState(true);
 
   // useEffect(() => {
@@ -28,8 +31,16 @@ const WeaponsPage = ({ typeFilter }: WeaponsPageProps) => {
   //   return () => clearTimeout(timer);
   // }, []);
 
-  const openModal = (product: typeof weapons[0]) => setSelectedProduct(product);
-  const closeModal = () => setSelectedProduct(null);
+  const openModal = (product: typeof weapons[0], mediaIndex = 0) => {
+    const slides = getProductMedia(product.images, product.video);
+    setModalStartIndex(mediaIndex);
+    setAutoPlayVideo(slides[mediaIndex]?.type === "video");
+    setSelectedProduct(product);
+  };
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setAutoPlayVideo(false);
+  };
 
   const parsePrice = (price: string | number) => {
     if (typeof price === "number") return price;
@@ -176,10 +187,11 @@ const WeaponsPage = ({ typeFilter }: WeaponsPageProps) => {
             <Card
               key={product.id}
               images={product.images}
+              video={product.video}
               title={product.title}
               price={product.price}
               state={product.state}
-              onClick={() => openModal(product)}
+              onClick={(mediaIndex) => openModal(product, mediaIndex)}
             />
           ))
         ) : (
@@ -194,6 +206,8 @@ const WeaponsPage = ({ typeFilter }: WeaponsPageProps) => {
         isOpen={!!selectedProduct}
         onClose={closeModal}
         product={selectedProduct}
+        initialIndex={modalStartIndex}
+        autoPlayVideo={autoPlayVideo}
       />
     </div>
   );

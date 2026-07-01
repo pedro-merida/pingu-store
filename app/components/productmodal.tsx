@@ -2,35 +2,93 @@
 
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import HighlightedDescription from "./HighlightedDescription";
+import { getProductMedia } from "../types/product";
 
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
+  initialIndex?: number;
+  autoPlayVideo?: boolean;
   product: {
     title: string;
     price: number | string;
     images: string[];
+    video?: string;
     description?: string;
     state: "disponible" | "vendida";
   } | null;
 }
 
-const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
+const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVideo = false }: ModalProps) => {
   const [current, setCurrent] = useState(0);
   const [show, setShow] = useState(isOpen);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const slides = useMemo(
+    () => (product ? getProductMedia(product.images, product.video) : []),
+    [product]
+  );
+
+  const pauseCarouselVideo = () => {
+    videoRef.current?.pause();
+    carouselRef.current?.querySelectorAll("video").forEach((video) => video.pause());
+  };
+
+  const tryPlayVideo = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    try {
+      video.muted = false;
+      await video.play();
+    } catch {
+      try {
+        video.muted = true;
+        await video.play();
+      } catch {
+        // El navegador bloqueó la reproducción automática.
+      }
+    }
+  };
 
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
   const SWIPE_THRESHOLD = 50;
 
-  // Resetear carrusel cuando cambia el producto
   useEffect(() => {
-    setCurrent(0);
-  }, [product]);
+    setCurrent(initialIndex);
+  }, [product, initialIndex]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      pauseCarouselVideo();
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen || !show || !autoPlayVideo || !product) return;
+
+    const targetSlide = slides[initialIndex];
+    if (targetSlide?.type !== "video") return;
+
+    const timer = window.setTimeout(() => {
+      void tryPlayVideo();
+    }, 100);
+
+    return () => window.clearTimeout(timer);
+  }, [isOpen, show, autoPlayVideo, product, initialIndex, slides]);
+
+  useEffect(() => {
+    const activeSlide = slides[current];
+    if (activeSlide?.type !== "video") {
+      pauseCarouselVideo();
+    }
+  }, [current, slides]);
 
   // Cerrar con ESC
   useEffect(() => {
@@ -52,7 +110,7 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
     if (isOpen) {
       setShow(true);
     } else {
-      const timeout = setTimeout(() => setShow(false), 200); // duración de la animación
+      const timeout = setTimeout(() => setShow(false), 200);
       return () => clearTimeout(timeout);
     }
   }, [isOpen]);
@@ -71,16 +129,18 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
 
   if (!show || !product) return null;
 
-  const hasMultiple = product.images.length > 1;
+  const hasMultiple = slides.length > 1;
 
   const nextImage = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    setCurrent((prev) => (prev + 1) % product.images.length);
+    pauseCarouselVideo();
+    setCurrent((prev) => (prev + 1) % slides.length);
   };
 
   const prevImage = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    setCurrent((prev) => (prev - 1 + product.images.length) % product.images.length);
+    pauseCarouselVideo();
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -99,11 +159,13 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
     const distance = touchStartX.current - touchEndX.current;
 
     if (distance > SWIPE_THRESHOLD) {
-      setCurrent((prev) => (prev + 1) % product.images.length);
+      pauseCarouselVideo();
+      setCurrent((prev) => (prev + 1) % slides.length);
     }
 
     if (distance < -SWIPE_THRESHOLD) {
-      setCurrent((prev) => (prev - 1 + product.images.length) % product.images.length);
+      pauseCarouselVideo();
+      setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
     }
 
     touchStartX.current = null;
@@ -113,7 +175,7 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
   const handleBuy = () => {
     if (!product || product.state === "vendida") return;
 
-    const phoneNumber = "56978049873"; // tu número de WhatsApp en formato internacional
+    const phoneNumber = "56978049873";
     const message = `Hola, vengo de Pingu Store y quiero comprar la skin "${product.title}" de valor $${product.price}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -149,6 +211,7 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
         <div className="grid md:grid-cols-2 gap-6">
           {/* CARRUSEL */}
           <div 
+            ref={carouselRef}
             className="relative w-full h-full min-h-80 bg-[#1a1a1a] rounded-lg overflow-hidden group"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
@@ -158,17 +221,39 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
               className="flex h-full transition-transform duration-500 ease-out will-change-transform"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
-              {product.images.map((img, index) => (
+              {slides.map((slide, index) => (
                 <div key={index} className="relative min-w-full h-full">
-                  <Image
-                    src={img}
-                    alt={`${product.title}-${index}`}
-                    fill
-                    className="object-cover select-none"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority={index === 0}
-                    draggable={false}
-                  />
+                  {slide.type === "video" ? (
+                    <video
+                      ref={(element) => {
+                        videoRef.current = element;
+                        if (
+                          element &&
+                          autoPlayVideo &&
+                          index === initialIndex &&
+                          isOpen
+                        ) {
+                          void tryPlayVideo();
+                        }
+                      }}
+                      src={slide.src}
+                      poster={slide.poster}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="h-full w-full object-cover select-none"
+                    />
+                  ) : (
+                    <Image
+                      src={slide.src}
+                      alt={`${product.title}-${index}`}
+                      fill
+                      className="object-cover select-none"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={index === 0}
+                      draggable={false}
+                    />
+                  )}
                 </div>
               ))}
             </div>
@@ -198,10 +283,12 @@ const ProductModal = ({ isOpen, onClose, product }: ModalProps) => {
                   bg-black/30 lg:bg-transparent px-2 py-1 rounded-full
                   transition-opacity duration-200"
                 >
-                  {product.images.map((_, index) => (
+                  {slides.map((slide, index) => (
                     <span
                       key={index}
-                      className={`h-1.5 w-3 rounded-full transition-all duration-300 ${
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        slide.type === "video" ? "w-4" : "w-3"
+                      } ${
                         index === current ? "bg-white scale-110" : "bg-gray-600"
                       }`}
                     />

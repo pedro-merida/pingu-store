@@ -1,6 +1,6 @@
-import { BaseProduct } from "../types/product";
+import { WeaponProduct } from "../types/product";
 
-export const weapons: BaseProduct[] = [
+export const weapons: WeaponProduct[] = [
   {
     id: 1,
     type: "ak47",
@@ -828,5 +828,19 @@ export const weapons: BaseProduct[] = [
     ],
     state: "disponible",
     createdAt: "2026-06-17",
+  },
+  {
+    id: 64,
+    type: "cuchillo",
+    title: "Rasengan (Naruto)",
+    price: "4.000 CLP",
+    description: "Naruto concentra todo su chakra para lanzar un rasengan a sus enemigos.",
+    images: [
+      "/skins/weapons/cuchillo/knife_rasengan1.png",
+      "/skins/weapons/cuchillo/knife_rasengan2.png"
+    ],
+    video: "/skins/weapons/cuchillo/videos/knife_rasengan.mp4",
+    state: "disponible",
+    createdAt: "2026-07-01",
   },
 ];

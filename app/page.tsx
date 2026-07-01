@@ -13,7 +13,7 @@ import { packs } from "./data/packs";
 import { useState } from 'react';
 import ProductModal from './components/productmodal';
 
-import { CatalogProduct } from "./types/product";
+import { CatalogProduct, getProductMedia } from "./types/product";
 
 export default function Home() {
   const socialsTHNO = [
@@ -65,13 +65,19 @@ export default function Home() {
     .slice(0, 6);
 
   const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(null);
+  const [modalStartIndex, setModalStartIndex] = useState(0);
+  const [autoPlayVideo, setAutoPlayVideo] = useState(false);
 
-  const openModal = (product: CatalogProduct) => {
+  const openModal = (product: CatalogProduct, mediaIndex = 0) => {
+    const slides = getProductMedia(product.images, product.video);
+    setModalStartIndex(mediaIndex);
+    setAutoPlayVideo(slides[mediaIndex]?.type === "video");
     setSelectedProduct(product);
   };
 
   const closeModal = () => {
     setSelectedProduct(null);
+    setAutoPlayVideo(false);
   };
 
   return (
@@ -109,6 +115,8 @@ export default function Home() {
         isOpen={!!selectedProduct}
         onClose={closeModal}
         product={selectedProduct}
+        initialIndex={modalStartIndex}
+        autoPlayVideo={autoPlayVideo}
       />
 
       <AboutSection

@@ -7,7 +7,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 interface LatestSkinsCarouselProps {
   products: CatalogProduct[];
-  onCardClick?: (product: CatalogProduct) => void;
+  onCardClick?: (product: CatalogProduct, mediaIndex?: number) => void;
 }
 
 const LatestSkinsCarousel = ({
@@ -82,10 +82,11 @@ const LatestSkinsCarousel = ({
                 >
                   <Card
                     images={product.images}
+                    video={product.video}
                     title={product.title}
                     price={product.price}
                     state={product.state}
-                    onClick={() => onCardClick?.(product)}
+                    onClick={(mediaIndex) => onCardClick?.(product, mediaIndex)}
                   />
                 </div>
               ))}
