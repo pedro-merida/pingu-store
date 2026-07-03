@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
-import { useEffect, useMemo, useState, useRef } from "react";
+import { useEffect, useMemo, useState, useRef, useCallback } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import HighlightedDescription from "./HighlightedDescription";
 import { getProductMedia } from "../types/product";
 
+const REQUIREMENTS_IMAGE = "/info/skins_vip_admin.png";
 
 interface ModalProps {
   isOpen: boolean;
@@ -26,8 +27,18 @@ interface ModalProps {
 const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVideo = false }: ModalProps) => {
   const [current, setCurrent] = useState(0);
   const [show, setShow] = useState(isOpen);
+  const [showRequirementsImage, setShowRequirementsImage] = useState(false);
+  const [animateRequirementsOut, setAnimateRequirementsOut] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+
+  const closeRequirementsImage = useCallback(() => {
+    setAnimateRequirementsOut(true);
+    setTimeout(() => {
+      setShowRequirementsImage(false);
+      setAnimateRequirementsOut(false);
+    }, 250);
+  }, []);
 
   const slides = useMemo(
     () => (product ? getProductMedia(product.images, product.video) : []),
@@ -90,10 +101,29 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
     }
   }, [current, slides]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      setShowRequirementsImage(false);
+    }
+  }, [isOpen]);
+
+  // Pausar video cuando se abre el modal de requisitos
+  useEffect(() => {
+    if (showRequirementsImage) {
+      pauseCarouselVideo();
+    }
+  }, [showRequirementsImage]);
+
   // Cerrar con ESC
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        if (showRequirementsImage) {
+          closeRequirementsImage();
+        } else {
+          onClose();
+        }
+      }
     };
 
     if (isOpen) {
@@ -103,7 +133,7 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
     return () => {
       window.removeEventListener("keydown", handleEsc);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, showRequirementsImage, closeRequirementsImage]);
 
   // Manejar animación de entrada/salida
   useEffect(() => {
@@ -227,14 +257,6 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
                     <video
                       ref={(element) => {
                         videoRef.current = element;
-                        if (
-                          element &&
-                          autoPlayVideo &&
-                          index === initialIndex &&
-                          isOpen
-                        ) {
-                          void tryPlayVideo();
-                        }
                       }}
                       src={slide.src}
                       poster={slide.poster}
@@ -316,10 +338,21 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
                 <span className="font-bold text-yellow-400 drop-shadow-[0_0_6px_rgba(250,204,21,0.6)]">
                   Importante:
                 </span>{" "}
-                Solo comprar la skin si es que eres jugador{" "}
+                Para poder usar la skin en el servidor, se debe ser jugador{" "}
                 <span className="font-bold text-[#66c0f4] drop-shadow-[0_0_4px_rgba(102,192,244,0.5)]">
-                  STEAM.
-                </span>
+                  STEAM
+                </span>{" "}
+                y además, tener{" "}
+                <button
+                  type="button"
+                  onClick={() => {
+                    pauseCarouselVideo();
+                    setShowRequirementsImage(true);
+                  }}
+                  className="font-bold text-lime-500 underline decoration-lime-500/70 underline-offset-2 drop-shadow-[0_0_6px_rgba(163,230,53,0.6)] transition-colors hover:text-lime-400 hover:decoration-lime-400 cursor-pointer"
+                >
+                  SKINS, VIP o ADMIN.
+                </button>{" "}
               </p>
 
               <div className="mt-8 flex items-center gap-3">
@@ -357,6 +390,45 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
           </div>
         </div>
       </div>
+
+      {showRequirementsImage && (
+        <div
+          className={`fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm ${
+            animateRequirementsOut ? "animate-backdrop-fade-out" : "animate-backdrop-fade"
+          }`}
+          onClick={(e) => {
+            e.stopPropagation();
+            closeRequirementsImage();
+          }}
+        >
+          <div
+            className={`relative w-full max-w-[1200px] ${
+              animateRequirementsOut ? "animate-modal-scale-out" : "animate-modal-scale"
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={closeRequirementsImage}
+              className="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gray-900/80 text-white transition-colors hover:bg-gray-800 cursor-pointer"
+              aria-label="Cerrar imagen"
+            >
+              <FiX size={20} />
+            </button>
+
+            <div className="relative w-full overflow-hidden rounded-xl border border-gray-700 bg-[#1a1a1a]">
+              <Image
+                src={REQUIREMENTS_IMAGE}
+                alt="Requisitos: SKINS, VIP o ADMIN"
+                width={1200}
+                height={589}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
