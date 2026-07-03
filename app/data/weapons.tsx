@@ -843,4 +843,17 @@ export const weapons: WeaponProduct[] = [
     state: "disponible",
     createdAt: "2026-07-01",
   },
+  {
+    id: 65,
+    type: "cuchillo",
+    title: "Handroll",
+    price: "4.000 CLP",
+    description: "Para los que tienen hambre en el medio de la partida, Pingu Store les ofrece un handroll para saciar su hambre.",
+    images: [
+      "/skins/weapons/cuchillo/knife_handroll1.png",
+      "/skins/weapons/cuchillo/knife_handroll2.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-02",
+  },
 ];
