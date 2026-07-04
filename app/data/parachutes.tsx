@@ -66,4 +66,17 @@ export const parachutes: WeaponProduct[] = [
     state: "disponible",
     createdAt: "2026-07-03",
   },
+  {
+    id: 6,
+    type: "parachute",
+    title: "Paracaídas Colo-Colo",
+    price: "3.500 CLP",
+    description: "Un paracaídas con el diseño del equipo de fútbol Colo-Colo.",
+    images: [
+      "/skins/parachutes/colocolo1.png",
+      "/skins/parachutes/colocolo2.png",
+    ],
+    state: "vendida",
+    createdAt: "2026-07-03",
+  },
 ];
