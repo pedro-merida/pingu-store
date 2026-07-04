@@ -43,8 +43,8 @@ const Navbar = () => {
           </button>
 
           {/* LOGO */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             onClick={handleClose}
             className='flex items-center gap-2 transition duration-300 hover:scale-110'
           >
@@ -61,8 +61,8 @@ const Navbar = () => {
 
         {/* MENÚ DESKTOP — EXACTAMENTE IGUAL */}
         <ul className='hidden lg:flex gap-6 text-md ml-32'>
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             onClick={handleClose}
             className='px-3 py-1.5 rounded-md text-gray-300 hover:bg-gray-900 hover:text-white transition-colors duration-200'
           >
@@ -100,7 +100,7 @@ const Navbar = () => {
           </li>
 
           {/* Weapons */}
-          <li 
+          <li
             className="relative"
             onMouseEnter={() => setOpenMenu('weapons')}
             onMouseLeave={() => setOpenMenu(null)}
@@ -136,16 +136,24 @@ const Navbar = () => {
             </div>
           </li>
 
-          <Link 
-            href="/packs" 
+          <Link
+            href="/parachutes"
+            onClick={handleClose}
+            className='px-3 py-1.5 rounded-md hover:bg-gray-900 text-gray-300 hover:text-white transition-colors duration-200'
+          >
+            Skins de Paracaidas
+          </Link>
+
+          <Link
+            href="/packs"
             onClick={handleClose}
             className='px-3 py-1.5 rounded-md hover:bg-gray-900 text-gray-300 hover:text-white transition-colors duration-200'
           >
             Packs de Skins
           </Link>
 
-          <Link 
-            href="/pedido" 
+          <Link
+            href="/pedido"
             onClick={handleClose}
             className='px-3 py-1.5 rounded-md text-gray-300 hover:bg-gray-900 hover:text-white transition-colors duration-200'
           >
@@ -226,7 +234,7 @@ const Navbar = () => {
             <Link href="/weapons/m4a1" onClick={handleClose} className="text-gray-400">
               M4A1
             </Link>
-            
+
           </div>
 
           <Link href="/packs" onClick={handleClose} className="text-gray-300 mb-4 hover:text-white">

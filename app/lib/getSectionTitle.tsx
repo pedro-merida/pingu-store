@@ -1,5 +1,5 @@
 export const getSectionTitle = (
-  base: "player" | "weapons" | "packs",
+  base: "player" | "weapons" | "packs" | "parachutes",
   type?: string
 ) => {
   if (!type) {

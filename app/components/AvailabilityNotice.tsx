@@ -17,7 +17,12 @@ const AvailabilityNotice = ({ status, type }: Props) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const label = type === "player" ? "Personaje" : "Armas";
+  const label =
+    type === "player"
+      ? "Personaje"
+      : type === "parachute"
+      ? "Paracaídas"
+      : "Armas";
 
   const config = {
     disponible: {

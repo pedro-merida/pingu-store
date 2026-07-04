@@ -46,7 +46,7 @@ const RequestSkinSection = () => {
   return (
     <section className="w-full md:px-20">
       <div className="mx-auto">
-        
+
         {/* Título */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -59,7 +59,7 @@ const RequestSkinSection = () => {
 
         {/* Card principal */}
         <div className="bg-[#111827] border border-gray-700 rounded-2xl p-8 shadow-xl">
-          
+
           {/* Explicación */}
           <p className="text-gray-300 leading-relaxed text-md md:text-lg">
             Todas las Skins del catálogo son creadas o modificadas por{" "}
@@ -68,7 +68,7 @@ const RequestSkinSection = () => {
             </span>.
             <br /><br />
             Si quieres una Skin específica que no se encuentre en el catálogo
-            (ya sea de personaje o de arma), existe la posibilidad de que
+            (ya sea de personaje, de arma o de paracaídas), existe la posibilidad de que
             pueda ser creada especialmente para ti.
           </p>
 
@@ -86,7 +86,7 @@ const RequestSkinSection = () => {
                 </span>{" "}
                 o{" "}
                 <span className="font-bold text-blue-500 drop-shadow-[0_0_6px_rgba(59,130,246,0.6)]">
-                  Counter-Terrorist 
+                  Counter-Terrorist
                 </span>{" "}
                 dependiendo de la paleta de colores del personaje.
               </p>
@@ -94,11 +94,10 @@ const RequestSkinSection = () => {
 
             <div className="bg-[#060f20] border border-gray-700 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-lime-400 drop-shadow-[0_0_6px_rgba(163,230,53,0.6)] mb-2">
-                Skins de Armas
+                Skins de Armas y Paracaídas
               </h3>
               <p className="text-gray-400">
-                También puedes solicitar Skins personalizadas para armas
-                como AK-47, AWP, M4A1, Cuchillo, entre otras.
+                También puedes solicitar skins personalizadas para armas (AK-47, AWP, M4A1, cuchillos, entre otras) y para paracaídas.
               </p>
             </div>
           </div>
@@ -133,11 +132,11 @@ const RequestSkinSection = () => {
           {/* Botón CTA */}
           <div className="mt-10 flex justify-center">
             <button
-                onClick={handleRequest}
-                className="w-full md:w-auto px-8 py-4 bg-[#25D366] hover:bg-green-600 text-white font-semibold rounded-xl transition flex items-center justify-center gap-3 text-sm md:text-lg shadow-lg hover:shadow-green-900/30"
+              onClick={handleRequest}
+              className="w-full md:w-auto px-8 py-4 bg-[#25D366] hover:bg-green-600 text-white font-semibold rounded-xl transition flex items-center justify-center gap-3 text-sm md:text-lg shadow-lg hover:shadow-green-900/30"
             >
-                <FaWhatsapp className="w-6 h-6" />
-                Solicitar una Skin
+              <FaWhatsapp className="w-6 h-6" />
+              Solicitar una Skin
             </button>
           </div>
         </div>
@@ -145,18 +144,16 @@ const RequestSkinSection = () => {
 
       {showRequirementsImage && (
         <div
-          className={`fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm ${
-            animateRequirementsOut ? "animate-backdrop-fade-out" : "animate-backdrop-fade"
-          }`}
+          className={`fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm ${animateRequirementsOut ? "animate-backdrop-fade-out" : "animate-backdrop-fade"
+            }`}
           onClick={(e) => {
             e.stopPropagation();
             closeRequirementsImage();
           }}
         >
           <div
-            className={`relative w-full max-w-[1200px] ${
-              animateRequirementsOut ? "animate-modal-scale-out" : "animate-modal-scale"
-            }`}
+            className={`relative w-full max-w-[1200px] ${animateRequirementsOut ? "animate-modal-scale-out" : "animate-modal-scale"
+              }`}
             onClick={(e) => e.stopPropagation()}
           >
             <button

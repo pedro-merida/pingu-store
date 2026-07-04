@@ -14,7 +14,7 @@ export interface WeaponProduct extends BaseProduct {
 }
 
 export interface CatalogProduct extends BaseProduct {
-  category: "weapon" | "player" | "pack" | "custom";
+  category: "weapon" | "player" | "pack" | "custom" | "parachutes";
   video?: string;
 }
 
