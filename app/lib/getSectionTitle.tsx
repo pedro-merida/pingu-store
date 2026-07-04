@@ -6,6 +6,7 @@ export const getSectionTitle = (
     if (base === "player") return "Skins de Personaje";
     if (base === "weapons") return "Skins de Armas";
     if (base === "packs") return "Packs de Skins";
+    if (base === "parachutes") return "Skins de Paracaídas";
   }
 
   const map: Record<string, string> = {
@@ -19,6 +20,9 @@ export const getSectionTitle = (
     deagle: "Skins de Deagle",
     m4a1: "Skins de M4A1",
     cuchillo: "Skins de Cuchillos",
+
+    //Paracaídas
+    parchute: "Skins de Paracaídas",
   };
 
   const key = type?.toLowerCase() ?? "";

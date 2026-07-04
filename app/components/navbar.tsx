@@ -141,7 +141,7 @@ const Navbar = () => {
             onClick={handleClose}
             className='px-3 py-1.5 rounded-md hover:bg-gray-900 text-gray-300 hover:text-white transition-colors duration-200'
           >
-            Skins de Paracaidas
+            Skins de Paracaídas
           </Link>
 
           <Link

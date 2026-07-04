@@ -9,6 +9,7 @@ import { SiCounterstrike } from "react-icons/si";
 import LatestSkinsCarousel from "./components/LatestSkinsCarousel";
 import { weapons } from "./data/weapons";
 import { players } from "./data/players";
+import { parachutes } from "./data/parachutes";
 import { packs } from "./data/packs";
 import { useState } from 'react';
 import ProductModal from './components/productmodal';
@@ -55,6 +56,7 @@ export default function Home() {
   const latestSkins = [
     ...weapons.map((w) => ({ ...w, category: "weapon" as const })),
     ...players.map((p) => ({ ...p, category: "player" as const })),
+    ...parachutes.map((p) => ({ ...p, category: "parachute" as const })),
     ...packs.map((p) => ({ ...p, category: "pack" as const })),
   ]
     .sort(
