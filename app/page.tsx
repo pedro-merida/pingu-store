@@ -59,11 +59,11 @@ export default function Home() {
     ...parachutes.map((p) => ({ ...p, category: "parachute" as const })),
     ...packs.map((p) => ({ ...p, category: "pack" as const })),
   ]
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() -
-        new Date(a.createdAt).getTime()
-    )
+    .sort((a, b) => {
+      const dateDiff =
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+      return dateDiff !== 0 ? dateDiff : b.id - a.id;
+    })
     .slice(0, 6);
 
   const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(null);
