@@ -79,4 +79,17 @@ export const parachutes: WeaponProduct[] = [
     state: "vendida",
     createdAt: "2026-07-03",
   },
+  {
+    id: 7,
+    type: "parachute",
+    title: "Paracaídas U de Chile",
+    price: "3.500 CLP",
+    description: "Un paracaídas con el diseño del equipo de fútbol Universidad de Chile.",
+    images: [
+      "/skins/parachutes/udechile1.png",
+      "/skins/parachutes/udechile2.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-07-05",
+  },
 ];
