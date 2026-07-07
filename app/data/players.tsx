@@ -762,4 +762,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-06-24",
   },
+  {
+    id: 64,
+    type: "tt",
+    title: "Haaland (Noruega)",
+    price: "4.000 CLP",
+    description: "Haaland, el capitán del equipo de fútbol de Noruega, se une a los Terrorist para hacer que su equipo gane el mundial.",
+    images: [
+      "/skins/players/tt/haaland_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-07",
+  },
 ];
