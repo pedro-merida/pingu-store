@@ -119,6 +119,7 @@ export default function Home() {
         product={selectedProduct}
         initialIndex={modalStartIndex}
         autoPlayVideo={autoPlayVideo}
+        isParachute={selectedProduct?.category === "parachute"}
       />
 
       <AboutSection

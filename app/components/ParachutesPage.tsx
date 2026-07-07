@@ -210,6 +210,7 @@ const ParachutesPage = ({ typeFilter }: ParachutesPageProps) => {
         product={selectedProduct}
         initialIndex={modalStartIndex}
         autoPlayVideo={autoPlayVideo}
+        isParachute
       />
     </div>
   );

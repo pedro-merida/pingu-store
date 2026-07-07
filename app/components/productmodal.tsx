@@ -14,6 +14,7 @@ interface ModalProps {
   onClose: () => void;
   initialIndex?: number;
   autoPlayVideo?: boolean;
+  isParachute?: boolean;
   product: {
     title: string;
     price: number | string;
@@ -24,7 +25,7 @@ interface ModalProps {
   } | null;
 }
 
-const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVideo = false }: ModalProps) => {
+const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVideo = false, isParachute = false }: ModalProps) => {
   const [current, setCurrent] = useState(0);
   const [show, setShow] = useState(isOpen);
   const [showRequirementsImage, setShowRequirementsImage] = useState(false);
@@ -235,12 +236,12 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
           transition-all duration-200
           z-20 cursor-pointer"
         >
-          <FiX size={20}/>
+          <FiX size={20} />
         </button>
 
         <div className="grid md:grid-cols-2 gap-6">
           {/* CARRUSEL */}
-          <div 
+          <div
             ref={carouselRef}
             className="relative w-full h-full min-h-80 bg-[#1a1a1a] rounded-lg overflow-hidden group"
             onTouchStart={handleTouchStart}
@@ -299,7 +300,7 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
                 </button>
 
                 {/* Indicadores */}
-                <div 
+                <div
                   className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 
                   opacity-100 lg:opacity-0 lg:group-hover:opacity-100 
                   bg-black/30 lg:bg-transparent px-2 py-1 rounded-full
@@ -308,11 +309,9 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
                   {slides.map((slide, index) => (
                     <span
                       key={index}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
-                        slide.type === "video" ? "w-4" : "w-3"
-                      } ${
-                        index === current ? "bg-white scale-110" : "bg-gray-600"
-                      }`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${slide.type === "video" ? "w-4" : "w-3"
+                        } ${index === current ? "bg-white scale-110" : "bg-gray-600"
+                        }`}
                     />
                   ))}
                 </div>
@@ -338,30 +337,52 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
                 <span className="font-bold text-yellow-400 drop-shadow-[0_0_6px_rgba(250,204,21,0.6)]">
                   Importante:
                 </span>{" "}
-                Para poder usar la skin en el servidor, se debe ser jugador{" "}
-                <span className="font-bold text-[#66c0f4] drop-shadow-[0_0_4px_rgba(102,192,244,0.5)]">
-                  STEAM
-                </span>{" "}
-                y además, tener{" "}
-                <button
-                  type="button"
-                  onClick={() => {
-                    pauseCarouselVideo();
-                    setShowRequirementsImage(true);
-                  }}
-                  className="font-bold text-lime-500 underline decoration-lime-500/70 underline-offset-2 drop-shadow-[0_0_6px_rgba(163,230,53,0.6)] transition-colors hover:text-lime-400 hover:decoration-lime-400 cursor-pointer"
-                >
-                  SKINS, VIP o ADMIN.
-                </button>{" "}
+                {isParachute ? (
+                  <>
+                    Para poder usar la skin en el servidor se debe ser jugador{" "}
+                    <span className="font-bold text-[#66c0f4] drop-shadow-[0_0_4px_rgba(102,192,244,0.5)]">
+                      STEAM
+                    </span>{" "}
+                    y además haber renovado{" "}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        pauseCarouselVideo();
+                        setShowRequirementsImage(true);
+                      }}
+                      className="font-bold text-lime-500 underline decoration-lime-500/70 underline-offset-2 drop-shadow-[0_0_6px_rgba(163,230,53,0.6)] transition-colors hover:text-lime-400 hover:decoration-lime-400 cursor-pointer"
+                    >
+                      SKINS, VIP o ADMIN
+                    </button>{" "}
+                    al menos 3 meses de manera consecutiva.
+                  </>
+                ) : (
+                  <>
+                    Para poder usar la skin en el servidor, se debe ser jugador{" "}
+                    <span className="font-bold text-[#66c0f4] drop-shadow-[0_0_4px_rgba(102,192,244,0.5)]">
+                      STEAM
+                    </span>{" "}
+                    y además, tener{" "}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        pauseCarouselVideo();
+                        setShowRequirementsImage(true);
+                      }}
+                      className="font-bold text-lime-500 underline decoration-lime-500/70 underline-offset-2 drop-shadow-[0_0_6px_rgba(163,230,53,0.6)] transition-colors hover:text-lime-400 hover:decoration-lime-400 cursor-pointer"
+                    >
+                      SKINS, VIP o ADMIN.
+                    </button>
+                  </>
+                )}
               </p>
 
               <div className="mt-8 flex items-center gap-3">
                 <p
-                  className={`text-3xl font-semibold transition-all ${
-                    product.state === "vendida"
+                  className={`text-3xl font-semibold transition-all ${product.state === "vendida"
                       ? "text-gray-500 line-through"
                       : "text-white"
-                  }`}
+                    }`}
                 >
                   ${product.price}
                 </p>
@@ -378,11 +399,10 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
               onClick={product.state === "vendida" ? undefined : handleBuy}
               disabled={product.state === "vendida"}
               className={`mt-6 py-3 px-4 rounded-lg font-semibold transition flex items-center justify-center gap-2
-              ${
-                product.state === "vendida"
+              ${product.state === "vendida"
                   ? "bg-gray-700 text-gray-400 cursor-not-allowed"
                   : "bg-[#25D366] text-white hover:bg-[#1EBE5D] cursor-pointer"
-              }`}
+                }`}
             >
               <FaWhatsapp className="w-5 h-5" />
               {product.state === "vendida" ? "Skin vendida" : "Comprar"}
@@ -393,18 +413,16 @@ const ProductModal = ({ isOpen, onClose, product, initialIndex = 0, autoPlayVide
 
       {showRequirementsImage && (
         <div
-          className={`fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm ${
-            animateRequirementsOut ? "animate-backdrop-fade-out" : "animate-backdrop-fade"
-          }`}
+          className={`fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm ${animateRequirementsOut ? "animate-backdrop-fade-out" : "animate-backdrop-fade"
+            }`}
           onClick={(e) => {
             e.stopPropagation();
             closeRequirementsImage();
           }}
         >
           <div
-            className={`relative w-full max-w-[1200px] ${
-              animateRequirementsOut ? "animate-modal-scale-out" : "animate-modal-scale"
-            }`}
+            className={`relative w-full max-w-[1200px] ${animateRequirementsOut ? "animate-modal-scale-out" : "animate-modal-scale"
+              }`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
