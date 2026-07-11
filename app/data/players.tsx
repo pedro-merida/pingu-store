@@ -774,4 +774,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-07-07",
   },
+  {
+    id: 65,
+    type: "ct",
+    title: "Seishiro Nagi (Blue Lock)",
+    price: "3.500 CLP",
+    description: "Seishiro Nagi, uno de los delanteros de Blue Lock, se une a los Counter-Terrorist para acabar con todos sus enemigos el solo como buen egoista.",
+    images: [
+      "/skins/players/ct/nagi_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-10",
+  },
 ];
