@@ -786,4 +786,16 @@ export const players: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-07-10",
   },
+  {
+    id: 66,
+    type: "ct",
+    title: "Michael Scott (The Office)",
+    price: "4.000 CLP",
+    description: "Michael Scott, el gerente de Dunder Mifflin, se une a los Counter-Terrorist para encontrar el momento perfecto para decir \'That's what she said\'.",
+    images: [
+      "/skins/players/ct/michael_scott_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-13",
+  },
 ];
