@@ -791,11 +791,24 @@ export const players: BaseProduct[] = [
     type: "ct",
     title: "Michael Scott (The Office)",
     price: "4.000 CLP",
-    description: "Michael Scott, el gerente de Dunder Mifflin, se une a los Counter-Terrorist para encontrar el momento perfecto para decir \'That's what she said\'.",
+    description: "Michael Scott, el gerente de Dunder Mifflin, se une a los Counter-Terrorist con su apariencia normal o como Prison Mike para encontrar el momento perfecto para decir \'That's what she said\'.",
     images: [
-      "/skins/players/ct/michael_scott_ct.png"
+      "/skins/players/ct/michael_scott1_ct.png",
+      "/skins/players/ct/michael_scott2_ct.png"
     ],
     state: "disponible",
     createdAt: "2026-07-13",
+  },
+  {
+    id: 67,
+    type: "tt",
+    title: "Dwight Schrute (The Office)",
+    price: "4.000 CLP",
+    description: "Dwight Schrute, uno de los vendedores de Dunder Mifflin, se une a los Terrorist para hacer todo lo posible para ser el gerente de Dunder Mifflin.",
+    images: [
+      "/skins/players/tt/dwight_schrute_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-14",
   },
 ];
