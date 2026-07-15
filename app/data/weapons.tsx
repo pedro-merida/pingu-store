@@ -856,4 +856,17 @@ export const weapons: WeaponProduct[] = [
     state: "disponible",
     createdAt: "2026-07-02",
   },
+  {
+    id: 66,
+    type: "deagle",
+    title: "Dual High Elf Deagle",
+    price: "4.000 CLP",
+    description: "Imagina tener el poder de una Desert Eagle pero duplicado! Con un acabado blanco, rojo y oro muy elegante.",
+    images: [
+      "/skins/weapons/deagle/deagle_dual_highelf1.png",
+      "/skins/weapons/deagle/deagle_dual_highelf2.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-15",
+  },
 ];
