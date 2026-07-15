@@ -581,7 +581,7 @@ export const weapons: WeaponProduct[] = [
       "/skins/weapons/deagle/deagle_phoenix1.png",
       "/skins/weapons/deagle/deagle_phoenix2.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2024-11-15",
   },
   {
