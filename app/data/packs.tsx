@@ -120,4 +120,18 @@ export const packs: BaseProduct[] = [
     state: "vendida",
     createdAt: "2026-02-07",
   },
+  {
+    id: 10,
+    type: "pack",
+    title: "Jinx (Arcane) + AK47 PowPow",
+    price: "7.000 CLP",
+    description: "Jinx, La protagonista de la serie Arcane y personaje de League of Legends, se une a los Counter-Terrorist con un Pack de Skins que incluye su Skin de Player y una Skin de AK47 inspirada en su arma PowPow.",
+    images: [
+      "/skins/packs/jinx1.png",
+      "/skins/packs/jinx2.png",
+      "/skins/packs/jinx3.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-07-14",
+  },
 ];
