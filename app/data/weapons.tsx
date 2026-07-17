@@ -840,7 +840,7 @@ export const weapons: WeaponProduct[] = [
       "/skins/weapons/cuchillo/knife_rasengan2.png"
     ],
     video: "/skins/weapons/cuchillo/videos/knife_rasengan.mp4",
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-07-01",
   },
   {
