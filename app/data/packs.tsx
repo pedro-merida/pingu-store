@@ -134,4 +134,19 @@ export const packs: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-07-14",
   },
+  {
+    id: 11,
+    type: "pack",
+    title: "Kirito (Sword Art Online) + Espadas de Kirito",
+    price: "7.000 CLP",
+    description: "Kirito, el protagonista de Sword Art Online, se une a los Counter-Terrorist con un Pack de Skins que incluye su Skin de Player y una Skin de Cuchillo inspirada en sus iconicas espadas.",
+    images: [
+      "/skins/packs/kirito1.png",
+      "/skins/packs/kirito2.png",
+      "/skins/packs/kirito3.png",
+      "/skins/packs/kirito4.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-07-20",
+  },
 ];
