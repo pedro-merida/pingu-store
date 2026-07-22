@@ -811,4 +811,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-07-14",
   },
+  {
+    id: 68,
+    type: "ct",
+    title: "Lucy (Cyberpunk: Edgerunners)",
+    price: "4.000 CLP",
+    description: "Lucy, la Netrunner de Night City, se une a los Counter-Terrorist para hackear y luchar contra las corporaciones opresivas.",
+    images: [
+      "/skins/players/ct/lucy_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-22",
+  },
 ];
