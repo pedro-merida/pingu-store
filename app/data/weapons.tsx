@@ -869,4 +869,18 @@ export const weapons: WeaponProduct[] = [
     state: "disponible",
     createdAt: "2026-07-15",
   },
+  {
+    id: 67,
+    type: "awp",
+    title: "Paraguas AWP",
+    price: "3.500 CLP",
+    description: "Para estos días de lluvia, el AWP Paraguas te servirá tanto para derrotar a tus enemigos, como para cubrirte del temporal.",
+    images: [
+      "/skins/weapons/awp/awp_umbrella1.png",
+      "/skins/weapons/awp/awp_umbrella2.png"
+    ],
+    video: "/skins/weapons/awp/videos/awp_umbrella.mp4",
+    state: "disponible",
+    createdAt: "2026-07-21",
+  },
 ];
