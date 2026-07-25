@@ -823,4 +823,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-07-22",
   },
+  {
+    id: 69,
+    type: "tt",
+    title: "Jeff The Killer",
+    price: "3.500 CLP",
+    description: "Jeff The Killer, el protagonista del temible creepypasta con el mismo nombre, se une a los Terrorist para asesinar a sus enemigos e infundirles terror.",
+    images: [
+      "/skins/players/tt/jeff_the_killer_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-07-25",
+  },
 ];
