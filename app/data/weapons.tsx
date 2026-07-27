@@ -883,4 +883,23 @@ export const weapons: WeaponProduct[] = [
     state: "disponible",
     createdAt: "2026-07-21",
   },
+  {
+    id: 68,
+    type: "m4a1",
+    title: "Phantom Prelude to Chaos M4A1",
+    price: "3.500 CLP",
+    description: "Skin de M4A1 inspirada en el arma Phantom del Videojuego Valorant. Esta skin siendo la Prelude to Chaos con todas sus variantes para poder escoger.",
+    images: [
+      "/skins/weapons/m4a1/m4_chaos_phantom1.png",
+      "/skins/weapons/m4a1/m4_chaos_phantom2.png",
+      "/skins/weapons/m4a1/m4_chaos_phantom3.png",
+      "/skins/weapons/m4a1/m4_chaos_phantom4.png",
+      "/skins/weapons/m4a1/m4_chaos_phantom5.png",
+      "/skins/weapons/m4a1/m4_chaos_phantom6.png",
+      "/skins/weapons/m4a1/m4_chaos_phantom7.png",
+      "/skins/weapons/m4a1/m4_chaos_phantom8.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-07-27",
+  },
 ];
