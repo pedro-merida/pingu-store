@@ -902,4 +902,23 @@ export const weapons: WeaponProduct[] = [
     state: "disponible",
     createdAt: "2026-07-27",
   },
+  {
+    id: 69,
+    type: "awp",
+    title: "Marshal Neo-Frontier AWP",
+    price: "4.000 CLP",
+    description: "Skin de AWP inspirada en el arma Marshal del Videojuego Valorant. Esta skin siendo la Neo-Frontier con todas sus variantes para poder escoger.",
+    images: [
+      "/skins/weapons/awp/awp_neofrontier_marshal1.png",
+      "/skins/weapons/awp/awp_neofrontier_marshal2.png",
+      "/skins/weapons/awp/awp_neofrontier_marshal3.png",
+      "/skins/weapons/awp/awp_neofrontier_marshal4.png",
+      "/skins/weapons/awp/awp_neofrontier_marshal5.png",
+      "/skins/weapons/awp/awp_neofrontier_marshal6.png",
+      "/skins/weapons/awp/awp_neofrontier_marshal7.png",
+      "/skins/weapons/awp/awp_neofrontier_marshal8.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-07-29",
+  },
 ];
