@@ -835,4 +835,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-07-25",
   },
+  {
+    id: 70,
+    type: "ct",
+    title: "Spider-Gwen",
+    price: "3.500 CLP",
+    description: "Spider-Gwen, una de los muchos Spider-Man del Spider-Verse, se une a los Counter-Terrorist para luchar contra el mal y mantener la paz.",
+    images: [
+      "/skins/players/ct/spider_gwen_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-08-06",
+  },
 ];
