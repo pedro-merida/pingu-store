@@ -859,4 +859,17 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-08-09",
   },
+  {
+    id: 72,
+    type: "tt",
+    title: "Zuko (Avatar: The Last Airbender)",
+    price: "4.000 CLP",
+    description: "Zuko, el príncipe de la nación fuego de Avatar: The Last Airbender, se une a los Terrorist para encontrar su camino hacia la redención. Cuando Zuko tiene la bomba, aparecen sus espadas en su espalda.",
+    images: [
+      "/skins/players/tt/zuko1_tt.png",
+      "/skins/players/tt/zuko2_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-08-10",
+  },
 ];
