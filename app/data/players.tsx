@@ -847,4 +847,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-08-06",
   },
+  {
+    id: 71,
+    type: "ct",
+    title: "Chuck Norris",
+    price: "3.500 CLP",
+    description: "Chuck Norris, el leyenda de la acción, se une a los Counter-Terrorist para demostrarles a sus enemigos que nadie puede derrotarlo.",
+    images: [
+      "/skins/players/ct/chuck_norris_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-08-09",
+  },
 ];
