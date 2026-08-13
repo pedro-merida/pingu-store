@@ -872,4 +872,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-08-10",
   },
+  {
+    id: 73,
+    type: "ct",
+    title: "Huevito Rey",
+    price: "4.000 CLP",
+    description: "Huevito Rey se une a los Counter-Terrorist! Aunque el está preso...",
+    images: [
+      "/skins/players/ct/huevito_rey_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-08-13",
+  },
 ];
