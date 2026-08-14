@@ -884,4 +884,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-08-13",
   },
+  {
+    id: 74,
+    type: "tt",
+    title: "Choche007",
+    price: "4.000 CLP",
+    description: "Choche007 se une a los Terrorist para explicar las reglas de chat que estamos atrasados, ya?",
+    images: [
+      "/skins/players/tt/choche_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-08-14",
+  },
 ];
