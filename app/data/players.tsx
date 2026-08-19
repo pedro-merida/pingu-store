@@ -844,7 +844,7 @@ export const players: BaseProduct[] = [
     images: [
       "/skins/players/ct/spider_gwen_ct.png"
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2026-08-06",
   },
   {
