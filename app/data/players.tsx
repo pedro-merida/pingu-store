@@ -896,4 +896,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-08-14",
   },
+  {
+    id: 75,
+    type: "tt",
+    title: "Guru Guru",
+    price: "4.000 CLP",
+    description: "Guru Guru, el compañero del Profesor Rosa, gue ugue a gos Terrorist gaga agugar a gu eguigo a gagar!",
+    images: [
+      "/skins/players/tt/guruguru_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-08-20",
+  },
 ];
