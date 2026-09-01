@@ -908,4 +908,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-08-20",
   },
+  {
+    id: 76,
+    type: "tt",
+    title: "Hu Tao (Genshin Impact)",
+    price: "4.000 CLP",
+    description: "Hu Tao, la directora de la funeraria Wangsheng de Genshin Impact, se une a los Terrorist para derrotar a sus enemigos y promover su negocio de funeraria.",
+    images: [
+      "/skins/players/tt/hutao_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-08-31",
+  },
 ];
