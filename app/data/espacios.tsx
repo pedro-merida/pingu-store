@@ -3,6 +3,6 @@ export type Type = "weapon" | "player" | "parachute";
 
 export const espacios: Record<Type, Status> = {
   weapon: "vendido",
-  player: "ultimos",
+  player: "vendido",
   parachute: "vendido",
 };
