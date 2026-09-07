@@ -920,4 +920,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-08-31",
   },
+  {
+    id: 77,
+    type: "ct",
+    title: "Engañao pa Chillan",
+    price: "4.000 CLP",
+    description: "¿Y por que no me comprai la skin? Asi tal cual. Engañao pa Chillan se une a los Counter-Terrorist pagandoles 200, 100 lucas lo que quieran.",
+    images: [
+      "/skins/players/ct/chillan_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-09-07",
+  },
 ];
