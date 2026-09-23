@@ -932,4 +932,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-09-07",
   },
+  {
+    id: 78,
+    type: "ct",
+    title: "Capitán John Price (Call of Duty)",
+    price: "4.000 CLP",
+    description: "El capitán John Price, el comandante de la Task Force 141, se une a los Counter-Terrorist para cumplir su misión y detener al enemigo.",
+    images: [
+      "/skins/players/ct/john_price_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-09-23",
+  },
 ];
