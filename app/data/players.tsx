@@ -944,4 +944,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-09-23",
   },
+  {
+    id: 79,
+    type: "tt",
+    title: "Ratchet (Ratchet & Clank)",
+    price: "4.000 CLP",
+    description: "Ratchet, el protagonista de la serie Ratchet & Clank, se une a los Terrorist para enfrentarse a sus enemigos y salvar el universo.",
+    images: [
+      "/skins/players/tt/ratchet_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-09-30",
+  },
 ];
