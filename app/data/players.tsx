@@ -960,7 +960,7 @@ export const players: BaseProduct[] = [
     id: 80,
     type: "tt",
     title: "Kratos Nórdico (God of War 2018)",
-    price: "4.000 CLP",
+    price: "3.500 CLP",
     description: "Kratos, el protagonista de la serie God of War, se une a los Terrorist con su apariencia Nórdica para enfrentarse a sus enemigos de manera más calmada y estratégica.",
     images: [
       "/skins/players/tt/kratos_nordico_tt.png"
