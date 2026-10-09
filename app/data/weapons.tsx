@@ -180,7 +180,7 @@ export const weapons: WeaponProduct[] = [
       "/skins/weapons/ak47/ak_sudden_attack1.png",
       "/skins/weapons/ak47/ak_sudden_attack2.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2025-12-23",
   },
   {
@@ -371,7 +371,7 @@ export const weapons: WeaponProduct[] = [
     type: "cuchillo",
     title: "Balisongs variantes",
     price: "3.500 CLP C/U",
-    description: "Skin de Cuchillo inspirada en el cuchillo balisong y con distintas variantes y colores. Actualmente están disponibles todas.",
+    description: "Skin de Cuchillo inspirada en el cuchillo balisong y con distintas variantes y colores. Actualmente están disponibles las primeras 6.",
     images: [
       "/skins/weapons/cuchillo/knife_ballisong1.png",
       "/skins/weapons/cuchillo/knife_ballisong2.png",
