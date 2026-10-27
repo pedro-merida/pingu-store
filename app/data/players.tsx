@@ -975,7 +975,7 @@ export const players: BaseProduct[] = [
     price: "4.000 CLP",
     description: "Woody, el vaquero sherif de Toy Story, se une a los Terrorist para salvar a sus amigos y arrojar a sus enemigos desde una ventana.",
     images: [
-      "/skins/players/tt/woody2_tt.png"
+      "/skins/players/tt/woody3_tt.png"
     ],
     state: "disponible",
     createdAt: "2026-10-27",
