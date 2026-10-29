@@ -980,4 +980,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-10-27",
   },
+  {
+    id: 82,
+    type: "ct",
+    title: "Moai \"Es cine...\"",
+    price: "3.500 CLP",
+    description: "Efectivamente... Es cine, el Moai se une a los Counter-Terrorist para asegurarse de que cada batalla sea cine.",
+    images: [
+      "/skins/players/ct/moai_cine_ct.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-10-29",
+  },
 ];
