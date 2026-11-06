@@ -955,4 +955,17 @@ export const weapons: WeaponProduct[] = [
     state: "disponible",
     createdAt: "2026-08-05",
   },
+  {
+    id: 72,
+    type: "ak47",
+    title: "Halloween AK47",
+    price: "3.500 CLP",
+    description: "Skin de AK47 inspirada en Halloween con un diseño terrorífico y espeluznante.",
+    images: [
+      "/skins/weapons/ak47/ak_halloween1.png",
+      "/skins/weapons/ak47/ak_halloween2.png",
+    ],
+    state: "disponible",
+    createdAt: "2026-11-06",
+  },
 ];
