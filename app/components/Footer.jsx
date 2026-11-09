@@ -66,7 +66,7 @@ const Footer = () => {
 
             <div className="flex items-center gap-4">
               <a
-                href="https://www.gametracker.com/server_info/177.221.141.92:26242/"
+                href="https://www.gametracker.com/server_info/38.7.197.74:27072/"
                 target="_blank"
                 className="w-11 h-11 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-yellow-400 hover:text-yellow-300 hover:scale-110 transition"
               >
