@@ -594,7 +594,7 @@ export const weapons: WeaponProduct[] = [
       "/skins/weapons/m4a1/m4_christmas1.png",
       "/skins/weapons/m4a1/m4_christmas2.png",
     ],
-    state: "disponible",
+    state: "vendida",
     createdAt: "2025-12-24",
   },
   {
