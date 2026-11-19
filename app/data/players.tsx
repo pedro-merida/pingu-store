@@ -992,4 +992,16 @@ export const players: BaseProduct[] = [
     state: "disponible",
     createdAt: "2026-10-29",
   },
+  {
+    id: 83,
+    type: "tt",
+    title: "Samus (Metroid)",
+    price: "3.500 CLP",
+    description: "Samus Aran, la protagonista de la serie Metroid, se une a los Terrorist para ayudarlos contra cualquier alien enemigo.",
+    images: [
+      "/skins/players/tt/samus_tt.png"
+    ],
+    state: "disponible",
+    createdAt: "2026-11-19",
+  },
 ];
